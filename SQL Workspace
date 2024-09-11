@@ -1,0 +1,113 @@
+mysql> use item_locator;
+Database changed
+mysql> show tables;
++------------------------+
+| Tables_in_item_locator |
++------------------------+
+| feedback |
+| login |
+| table1 |
+| table2 |
+| table3 |
+| table4 |
+| table5 |
++------------------------+
+mysql> desc login;
++----------+-------------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| username | varchar(20) | NO | PRI | NULL | |
+| password | varchar(20) | NO | | NULL | |
++----------+-------------+------+-----+---------+-------+
+mysql> select * from login;
++----------+----------+
+| username | password |
++----------+----------+
+| CHETAN | 12345 |
++----------+----------+
+mysql> desc table1;
++-----------+-------------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| item_name | varchar(20) | NO | | NULL | |
+| item_tag | varchar(20) | NO | PRI | NULL | |
++-----------+-------------+------+-----+---------+-------+
+mysql> select * from table1;
++--------------+----------+
+| item_name | item_tag |
++--------------+----------+
+| dragon fruit | 1 |
+| pineapple | 2 |
++--------------+----------+
+mysql> desc table2;
++-----------+-------------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| item_name | varchar(20) | NO | | NULL | |
+| item_tag | varchar(20) | NO | PRI | NULL | |
++-----------+-------------+------+-----+---------+-------+
+mysql> select * from table2;
++-----------+----------+
+| item_name | item_tag |
++-----------+----------+
+| mango | 2 |
++-----------+----------+
+mysql> desc table3;
++-----------+-------------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| item_name | varchar(20) | NO | | NULL | |
+| item_tag | varchar(20) | NO | PRI | NULL | |
++-----------+-------------+------+-----+---------+-------+
+mysql> select * from table3;
++-----------+----------+
+| item_name | item_tag |
++-----------+----------+
+| banana | 3 |
++-----------+----------+
+mysql> desc table4;
++-----------+-------------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| item_name | varchar(20) | NO | | NULL | |
+| item_tag | varchar(20) | NO | PRI | NULL | |
++-----------+-------------+------+-----+---------+-------+
+mysql> select * from table4;
++-----------+----------+
+| item_name | item_tag |
++-----------+----------+
+| kiwi | 4 |
++-----------+----------+
+mysql> desc table5;
++-----------+-------------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| item_name | varchar(20) | NO | | NULL | |
+| item_tag | varchar(20) | NO | PRI | NULL | |
++-----------+-------------+------+-----+---------+-------+
+mysql> select * from table5;
++-----------+----------+
+| item_name | item_tag |
++-----------+----------+
+| guava | 5 |
++-----------+----------+
+mysql> desc feedback;
++-------------+--------------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| username | varchar(20) | YES | | NULL | |
+| complaints | varchar(100) | YES | | NULL | |
+| suggestions | varchar(100) | YES | | NULL | |
++-------------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+mysql> select * from feedback;
++----------+------------------------------------------------+----------------------------------+
+| username | complaints | suggestions |
++----------+------------------------------------------------+----------------------------------+
+| CHETAN | none | its good |
+| CHETAN | basic ui | improve ui |
+| sakti | no username is provided when item is searched | add username column in the table |
+| ash | ik the admin password | change it and dont tell me |
+| ankit | abe aise nahi karte hai isko | isko waisa kar mai bolta hu |
+| harsh | site khali khali lag raha hai | ek kaam kar choco dede |
++----------+------------------------------------------------+----------------------------------+
